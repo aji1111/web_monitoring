@@ -38,12 +38,21 @@ def konek_sql_server():
             "Authentication=ActiveDirectoryPassword;"
             "Encrypt=yes;"
             "TrustServerCertificate=no;"
-            )
+        )
         conn = pyodbc.connect(conn_str, timeout=10)
+        print("✅ Koneksi ke SQL Server BERHASIL!")
         return conn
-    except pyodbc.Error as e:
-        print(f"Error koneksi: {e}")
-        return None
+    except pyodbc.InterfaceError as e:
+        print("❌ InterfaceError: Driver mungkin tidak terinstal dengan benar.")
+        print(f"Detail: {e}")
+    except pyodbc.OperationalError as e:
+        print("❌ OperationalError: Tidak bisa terhubung ke database. Cek firewall atau kredensial.")
+        print(f"Detail: {e}")
+    except Exception as e:
+        print("❌ ERROR tak terduga saat menghubungkan ke SQL Server.")
+        print(f"Detail: {e}")
+    
+    return None
 
 
 @memory.cache
