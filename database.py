@@ -29,10 +29,18 @@ memory = Memory(location=None, verbose=0)
 @memory.cache
 def konek_sql_server():
     try:
-        cnxn = f"DRIVER={DRIVER};SERVER={SERVER};DATABASE={DATABASE};UID={USERNAME};PWD={PASSWORD};Authentication={AUTHENTICATION}"
-        connection_url = URL.create("mssql+pyodbc", query={"odbc_connect": cnxn})
-        engine = sqlalchemy.create_engine(connection_url)
-        return engine
+        cnxn = (
+            "DRIVER={ODBC Driver 17 for SQL Server};"
+            "SERVER=rzqhrwdk2l3uxbrcptqo6wanym-g65xipsckyku3pgbyshb3jyejq.datawarehouse.pbidedicated.windows.net;"
+            "DATABASE=zkpi;"
+            "UID=purnomo.aji@indottech.corphr.com;"
+            "PWD=Purn0M012#;"
+            "Authentication=ActiveDirectoryPassword;"
+            "Encrypt=yes;"
+            "TrustServerCertificate=no;"
+            )
+        conn = pyodbc.connect(conn_str, timeout=10)
+        return conn
     except pyodbc.Error as e:
         print(f"Error koneksi: {e}")
         return None
