@@ -1,15 +1,2 @@
-pyodbc
-pandas
-numpy
-sqlalchemy
-plotly
-cachetools
-joblib
-fpdf
-pdfkit
-reportlab
-folium
-configparser
-base64
 dash-bootstrap-components
 dash-ag-grid
