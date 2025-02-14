@@ -209,6 +209,11 @@ def query_mdt(slect_site, select_date):
 # Fungsi untuk mengambil data SITEID
 def uniq_siteta(tipe):
     engine = konek_sql_server()
+    
+    if engine is None:
+        print("❌ Gagal Membuat Engine! Koneksi Database Bermasalah.")
+        return []
+
     if tipe == 'Site_id':
         query = "SELECT DISTINCT Site_id FROM dbo.ta"
     elif tipe == 'DATE_ID':
@@ -217,16 +222,12 @@ def uniq_siteta(tipe):
         query = "SELECT DISTINCT Band_id FROM dbo.ta"
     else:
         return []
+
     hasil = pd.read_sql_query(query, engine)
     engine.dispose()
-    if tipe == 'DATE_ID' and 'DATE_ID' in hasil.columns:
-        hasil['DATE_ID'] = pd.to_datetime(hasil['DATE_ID']).dt.strftime('%Y-%m-%d')  # Format ke YYYY-MM-DD
-        hasil = hasil.sort_values(by='DATE_ID', ascending=False)  # Urutkan dari besar ke kecil
-    elif tipe == 'Site_id' and 'Site_id' in hasil.columns:
-        hasil = hasil.sort_values(by='Site_id', ascending=True) # Urutkan dari kecil ke besar
-    elif tipe == 'Band_id' and 'Band_id' in hasil.columns:
-        hasil = hasil.sort_values(by='Band_id', ascending=True)
+    
     return hasil[tipe].tolist()
+
 
 
 def query_ta(slect_site, select_band, select_date):
