@@ -1,16 +1,15 @@
-pyodbc==4.0.35
-pandas==2.1.0
-numpy==1.25.2
-sqlalchemy==2.0.20
-dash==2.14.0
-dash-bootstrap-components==1.4.1
-dash-ag-grid==1.0.0
-plotly==5.18.0
-cachetools==5.3.1
-joblib==1.3.2
-fpdf==1.7.2
-pdfkit==1.0.0
-reportlab==4.0.4
-folium==0.14.0
-configparser==6.0.0
-base64==0.1.0
+pip install pyodbc
+pip install pandas
+pip install numpy
+pip install sqlalchemy
+pip install plotly
+pip install cachetools
+pip install joblib
+pip install fpdf
+pip install pdfkit
+pip install reportlab
+pip install folium
+pip install configparser
+pip install base64
+pip install dash-bootstrap-components
+pip install dash-ag-grid
