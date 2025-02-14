@@ -1,15 +1,15 @@
-pip install pyodbc
-pip install pandas
-pip install numpy
-pip install sqlalchemy
-pip install plotly
-pip install cachetools
-pip install joblib
-pip install fpdf
-pip install pdfkit
-pip install reportlab
-pip install folium
-pip install configparser
-pip install base64
-pip install dash-bootstrap-components
-pip install dash-ag-grid
+pyodbc
+pandas
+numpy
+sqlalchemy
+plotly
+cachetools
+joblib
+fpdf
+pdfkit
+reportlab
+folium
+configparser
+base64
+dash-bootstrap-components
+dash-ag-grid
