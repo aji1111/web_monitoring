@@ -29,7 +29,7 @@ memory = Memory(location=None, verbose=0)
 @memory.cache
 def konek_sql_server():
     try:
-        cnxn = (
+        conn_str = (
             "DRIVER={ODBC Driver 17 for SQL Server};"
             "SERVER=rzqhrwdk2l3uxbrcptqo6wanym-g65xipsckyku3pgbyshb3jyejq.datawarehouse.pbidedicated.windows.net;"
             "DATABASE=zkpi;"
