@@ -28,7 +28,7 @@ from database import uniq_siteta, query_ta
 
 # Register page and external stylesheets
 external_stylesheets = [dbc.themes.BOOTSTRAP]
-dash.register_page(__name__, path='/ta')
+dash.register_page(__name__)
 
 # Load data
 
