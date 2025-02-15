@@ -49,5 +49,5 @@ def query_daily4g(select_site, start_date, end_date):
         return daily4g.to_dict('records')
     except Exception as e:
         print(f"Error executing query: {e}")
-        return no_update
+        return None
 
