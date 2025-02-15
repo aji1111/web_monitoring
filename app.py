@@ -24,10 +24,10 @@ def main():
         from pages.home import home_page
         home_page()
     elif page == "Report to TSEL":
-        from pages.report_tsel import report_tsel_page
+        from pages.Report.report_tsel import report_tsel_page
         report_tsel_page()
     elif page == "Report to EID":
-        from pages.report_eid import report_eid_page
+        from pages.Report.report_eid import report_eid_page
         report_eid_page()
     elif page == "Monitoring Daily 4G":
         from pages.monitoring.monitoring_daily4g import monitoring_daily4g_page
