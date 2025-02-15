@@ -1,14 +1,9 @@
-import sys
-sys.path.insert(0, 'pages')
 import dash
-import os
-from dash import Dash, html, dcc, Input, Output, State
+from dash import Dash, html, dcc, Input, Output
 import dash_bootstrap_components as dbc
-from flask import Flask, send_file, make_response
-import time
-from PIL import Image
-import io
+from flask import Flask, make_response
 from dash import callback_context
+from pages.mdt import generate_pdf_mdt
 
 flask_server = Flask(__name__)
 
