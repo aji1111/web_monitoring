@@ -1,9 +1,5 @@
-import dash
-from dash import html
+import streamlit as st
 
-dash.register_page(__name__)
-
-layout = html.Div([
-    html.H1('Ini page Monitoring Hourly 2G'),
-    html.Div('This is our page Monitoring Hourly 2G'),
-])
+def report_tsel_page():
+    st.title("Halaman Report to TSEL")
+    st.write("Ini adalah halaman untuk Report to TSEL.")
