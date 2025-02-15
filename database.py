@@ -9,6 +9,7 @@ import pandas as pd
 from joblib import Memory
 from dash import Dash, html, dcc, Input, Output, ctx
 from dash import Dash, dcc, html, Input, Output, callback, State, dependencies, no_update, callback_context
+import clickhouse_connect
 
 dash.register_page(__name__, path=None)
 
