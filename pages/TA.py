@@ -1,5 +1,5 @@
 import streamlit as st
 
-def report_tsel_page():
+def ta_page():
     st.title("Halaman Report to TA")
     st.write("Ini adalah halaman untuk Report to TA.")
