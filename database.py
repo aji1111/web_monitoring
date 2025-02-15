@@ -1,14 +1,8 @@
 import pandas as pd
-from dash import Dash, html, dcc, Input, Output
 import clickhouse_connect
 from joblib import Memory
-import dash 
+import streamlit as st
 
-dash.register_page(__name__, path=None)
-
-layout = html.Div("This page is a placeholder.")
-
-#layout = None
 
 memory = Memory(location=None, verbose=0)
 
