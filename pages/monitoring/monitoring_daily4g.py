@@ -20,11 +20,6 @@ def monitoring_daily4g_page():
     )
     val_slid_mon4g = st.sidebar.slider("Threshold Value", min_value=0, max_value=102, value=0)
 
-    # Validasi input
-    if not select_site or not select_band:
-        st.warning("Silakan pilih Site dan Band terlebih dahulu.")
-        return
-
     # Query data dari database
     start_date, end_date = date_range
     df_daily4g = query_daily4g(select_site, start_date, end_date)
