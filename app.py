@@ -39,7 +39,7 @@ def main():
         from pages.mdt import mdt_page
         mdt_page()
     elif page == "TA":
-        from pages.ta import ta_page
+        from pages.TA import ta_page
         ta_page()
     elif page == "Export":
         from pages.export import export_page
