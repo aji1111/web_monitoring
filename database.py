@@ -2,6 +2,7 @@ import pandas as pd
 from dash import Dash, html, dcc, Input, Output
 import clickhouse_connect
 from joblib import Memory
+import dash 
 
 dash.register_page(__name__, path=None)
 
