@@ -1,15 +1,7 @@
-import sqlalchemy
-import pyodbc
 import pandas as pd
-from sqlalchemy.engine import Engine, URL
-import joblib
-from functools import wraps
-import dash
-import pandas as pd
-from joblib import Memory
-from dash import Dash, html, dcc, Input, Output, ctx
-from dash import Dash, dcc, html, Input, Output, callback, State, dependencies, no_update, callback_context
+from dash import Dash, html, dcc, Input, Output
 import clickhouse_connect
+from joblib import Memory
 
 dash.register_page(__name__, path=None)
 
