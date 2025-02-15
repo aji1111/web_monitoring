@@ -30,10 +30,10 @@ def main():
         from pages.report_eid import report_eid_page
         report_eid_page()
     elif page == "Monitoring Daily 4G":
-        from pages.monitoring_daily4g import monitoring_daily4g_page
+        from pages.monitoring.monitoring_daily4g import monitoring_daily4g_page
         monitoring_daily4g_page()
     elif page == "Monitoring Hourly 4G":
-        from pages.monitoring_hourly4g import monitoring_hourly4g_page
+        from pages.monitoring.monitoring_hourly4g import monitoring_hourly4g_page
         monitoring_hourly4g_page()
     elif page == "MDT":
         from pages.mdt import mdt_page
