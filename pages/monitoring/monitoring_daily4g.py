@@ -1,22 +1,11 @@
-import pyodbc
 import pandas as pd
-import numpy as np
-import sqlalchemy
-from sqlalchemy.engine import URL
-from dash import Dash, dcc, html, Input, Output, callback, dash_table, clientside_callback
-from dash.dash_table.Format import Format, Scheme, Sign, Symbol
-#from dash.dash_table import FormatTemplate
-from collections import OrderedDict
+import dash
+from dash import dcc, html, Input, Output, callback, dash_table
 import plotly.express as px
 from datetime import date, datetime, timedelta
-import dash_ag_grid as dag
-pd.options.mode.chained_assignment = None
-from plotly.subplots import make_subplots
 import plotly.graph_objects as go
-import dash
 from cachetools import cached
-from database import konek_sql_server, dfdail4gnya, uniq_site4g, query_daily4g
-
+from database import konek_sql_server, query_daily4g, uniq_site4g
 
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 dash.register_page(__name__)
