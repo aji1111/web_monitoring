@@ -3,7 +3,6 @@ from dash import Dash, html, dcc, Input, Output
 import dash_bootstrap_components as dbc
 from flask import Flask, make_response
 from dash import callback_context
-from pages.mdt import generate_pdf_mdt
 
 flask_server = Flask(__name__)
 
@@ -77,7 +76,6 @@ app.layout = dbc.Container(
 )
 
 
-from pages.mdt import generate_pdf_mdt
 @flask_server.route('/set_cookie')
 def set_cookie():
     response = make_response("Cookie dengan SameSite=Strict telah diset!")
