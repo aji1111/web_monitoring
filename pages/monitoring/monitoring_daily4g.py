@@ -10,7 +10,7 @@ def monitoring_daily4g_page():
 
     # Sidebar untuk filter
     st.sidebar.header("Filter")
-    select_site = st.sidebar.multiselect("Pilih Site", options=uniq_site4g('SITEID'), default=None)
+    select_site = st.sidebar.multiselect("Pilih Site", options=uniq_site4g('SITEID'))
     select_band = st.sidebar.multiselect("Pilih Band", options=['L1800', 'L900', 'L2100', 'L2300'], default=None)
     date_range = st.sidebar.date_input(
         "Pilih Rentang Tanggal",
@@ -23,6 +23,7 @@ def monitoring_daily4g_page():
     # Query data dari database
     start_date, end_date = date_range
     df_daily4g = query_daily4g(select_site, start_date, end_date)
+    print(df_daily4g)
     qdaily4g = pd.DataFrame(df_daily4g)
     if qdaily4g.empty:
         st.warning("Tidak ada data yang ditemukan untuk filter yang dipilih.")
