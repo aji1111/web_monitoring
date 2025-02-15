@@ -14,7 +14,6 @@ def monitoring_daily4g_page():
     select_band = st.sidebar.multiselect("Pilih Band", options=['L1800', 'L900', 'L2100', 'L2300'], default=None)
     date_range = st.sidebar.date_input(
         "Pilih Rentang Tanggal",
-        value=(date.today() - timedelta(days=2), date.today()),
         min_value=min(uniq_site4g('DATE_ID')),
         max_value=max(uniq_site4g('DATE_ID'))
     )
